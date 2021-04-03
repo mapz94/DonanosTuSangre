@@ -1,0 +1,36 @@
+/*
+Realizado por Miguel Pérez
+Las clases indicadas Materialize y la mayoría solo corrige sus valores por defecto. 
+https://materializecss.com/
+*/
+.wrapper {
+    /* Navbar padding */
+    padding: 0.5rem 2rem;
+}
+#main-container {
+    padding: 1rem;
+}
+.row{
+    /* Se corrige para que los row en materialize usen flex debido a que por defecto
+    vienen como display block.*/
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.col{
+    /* Esto corrige el margin horrible que tienen los col por defecto en materialize*/
+    margin: auto;
+}
+.article-image {
+    /* Esto solo justifica el centrado de la imagen en un componente card. Realizado por mi.*/
+    position: relative;
+    margin: auto;
+    max-width: 300px;
+    max-height: 300px;
+    contain: content;
+    justify-self: center;
+}
+#footer-bottom{
+    padding-left: 1rem;
+}

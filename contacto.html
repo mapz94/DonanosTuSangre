@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donanos tu sangre</title>
+    <link rel="stylesheet" href="/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="/mystyle.css">
+    <script src="/materialize/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="wrapper red darken-3">
+                <a href="/" class="brand-logo">
+                    Donanos tu sangre
+                    <div class="right-align">
+                        <a href="/contacto.html">
+                            Contacto
+                        </a>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="main-container" class="container">
+            <div class="row">
+                <div class="col s10 l5">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="article-image"
+                                src="https://puntodecorte.com/wp-content/uploads/2019/10/EHOVXcNXkAAfqZe.jpg"
+                                alt="Fomentemos la donación de sangre.">
+                        </div>
+                        <div class="card-content truncate">
+                            <a
+                                href="https://puntodecorte.com/conozca-los-mitos-y-realidades-sobre-donar-sangre/">
+                                Fuente de la imagen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s10 l7">
+                    <div class="card">
+                        <div class="card-content">
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h3>
+                                            Formulario de contacto:
+                                        </h3>
+                                        <p>
+                                            Llene este formulario para consultas y/o solicitudes.
+                                        </p>
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="rutInput">Rut</label>
+                                        <input required class="input-field" type="text" name="rut" id="rutInput">
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="namesInput">Nombres</label>
+                                        <input required class="input-field" type="text" name="names" id="namesInput">
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="surnamesInput">Apellidos</label>
+                                        <input required class="input-field" type="text" name="surnames"
+                                            id="surnamesInput">
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="addressInput">Dirección</label>
+                                        <input required class="input-field" type="text" name="address"
+                                            id="addressInput">
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="genderSelect">Genero</label>
+                                        <select class="input-field" multiple name="gender" id="genderSelect">
+                                            <option value="" disabled>Escoja su genero</option>
+                                            <option value="1">Masculino</option>
+                                            <option value="2">Femenino</option>
+                                        </select>
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="emailInput">Correo Electrónico</label>
+                                        <input required class="input-field" type="email" name="email" id="emailInput">
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="mobileInput">Telefóno Celular</label>
+                                        <input class="input-field" type="text" name="mobile" id="mobileInput">
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="phoneInput">Teléfono Fijo</label>
+                                        <input required class="input-field" type="text" name="phone" id="phoneInput">
+                                    </div>
+                                    <div class="col s12">
+                                        <label for="bloodInput">Tipo de Sangre</label>
+                                        <select class="input-field" name="bloodType" id="bloodInput">
+                                            <option value="" disabled>Escoja su tipo de sangre</option>
+                                            <option value="1">Tipo O+</option>
+                                            <option value="2">Tipo O-</option>
+                                            <option value="3">Tipo A+</option>
+                                            <option value="4">Tipo A-</option>
+                                            <option value="5">Tipo B+</option>
+                                            <option value="6">Tipo B-</option>
+                                            <option value="7">Tipo AB+</option>
+                                            <option value="8">Tipo AB-</option>
+                                        </select>
+                                    </div>
+                                    <div class="col s12">
+                                        <button class="btn" onclick=" M.toast({html: 'Formulario Enviado!'})" name="submitForm">Enviar datos</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer red darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s2">
+                    <li>
+                        <a class="white-text" href="/">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="/contacto.html">Contacto</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div id="footer-bottom" class="footer-copyright">
+            2021 DonanosTuSangre Miguel Pérez
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    /* Es necesario inicializar los componentes de formulario de materialize ya que estos dependen de Javascript
+    para funcionar.
+    */
+    M.AutoInit(); // Esto incializa materialize.
+    document.addEventListener('DOMContentLoaded', function () {
+        // Para incializar los Select Tag que funcionan con materialize
+        var options = {};
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, options);
+    });
+</script>
